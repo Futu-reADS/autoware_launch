@@ -42,7 +42,7 @@
   <arg name="rviz_config" default="$(find-pkg-share autoware_launch)/rviz/ft_autoware.rviz" description="rviz config"/>
 
   <group scoped="false">
-    <include file="$(find-pkg-share autoware_launch)/launch/autoware.launch.xml">
+    <include file="$(find-pkg-share autoware_launch)/launch/ft_autoware.launch.xml">
       <!-- Common -->
       <arg name="map_path" value="$(var map_path)"/>
       <arg name="vehicle_model" value="$(var vehicle_model)"/>

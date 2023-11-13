@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <!-- Essential parameters -->
-  <arg name="map_path" default="/home/liam/autoware/src/ft_delivery/ft_maps/nishishinjuku_autoware_map" description="point cloud and lanelet2 map directory path"/>
+  <arg name="map_path" default="/home/nagoya/autoware/src/ft_delivery/ft_maps/nishishinjuku_autoware_map" description="point cloud and lanelet2 map directory path"/>
   <arg name="vehicle_model" default="ft_vehicle" description="vehicle model name"/>
   <arg name="sensor_model" default="ft_sensor_kit" description="sensor model name"/>
 

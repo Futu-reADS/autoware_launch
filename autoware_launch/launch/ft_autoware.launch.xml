@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <!-- Essential parameters -->
-  <arg name="map_path" description="point cloud and lanelet2 map directory path"/>
-  <arg name="vehicle_model" description="vehicle model name"/>
-  <arg name="sensor_model" description="sensor model name"/>
+  <arg name="map_path" default="$(find-pkg-prefix ft_maps)/nishishinjuku_autoware_map" description="point cloud and lanelet2 map directory path"/>
+  <arg name="vehicle_model" default="ft_vehicle" description="vehicle model name"/>
+  <arg name="sensor_model" default="ft_sensor_kit" description="sensor model name"/>
   <arg name="use_pointcloud_container" default="true" description="launch pointcloud container"/>
   <arg name="pointcloud_container_name" default="pointcloud_container"/>
 
@@ -32,7 +32,7 @@
 
   <!-- System -->
   <arg name="system_run_mode" default="online" description="run mode in system"/>
-  <arg name="launch_system_monitor" default="true" description="launch system monitor"/>
+  <arg name="launch_system_monitor" default="false" description="launch system monitor"/>
   <arg name="launch_dummy_diag_publisher" default="false" description="launch dummy diag publisher"/>
 
   <!-- Tools -->

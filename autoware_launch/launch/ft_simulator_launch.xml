@@ -22,7 +22,7 @@
 
   <!-- Control -->
   <!-- Vehicle -->
-  <arg name="launch_vehicle_interface" default="false"/>
+  <arg name="launch_vehicle_interface" default="true"/>
   <!-- System -->
   <arg name="launch_system_monitor" default="false" description="launch system monitor"/>
   <arg name="launch_dummy_diag_publisher" default="false" description="launch dummy diag publisher"/>

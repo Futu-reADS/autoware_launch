@@ -244,7 +244,13 @@ Visualization Manager:
           Enabled: true
           Name: Lanelet2VectorMap
           Namespaces:
-            {}
+            center_lane_line: true
+            center_line_arrows: true
+            lane_start_bound: true
+            lanelet_id: true
+            left_lane_bound: true
+            right_lane_bound: true
+            road_lanelets: true
           Topic:
             Depth: 5
             Durability Policy: Transient Local
@@ -288,7 +294,7 @@ Visualization Manager:
                 Filter size: 10
                 History Policy: Keep Last
                 Reliability Policy: Best Effort
-                Value: /sensing/lidar/concatenated/pointcloud
+                Value: /sensing/lidar/top/hesai_points
               Use Fixed Frame: false
               Use rainbow: true
               Value: true
@@ -2083,21 +2089,26 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: 0
-      Class: rviz_default_plugins/TopDownOrtho
+      Class: rviz_default_plugins/ThirdPersonFollower
+      Distance: 50.41170120239258
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
+      Focal Point:
+        X: 5.413473129272461
+        Y: -7.362974643707275
+        Z: 4.36513880597289e-10
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 4.952942848205566
+      Pitch: 1.4347959756851196
       Target Frame: base_link
-      Value: TopDownOrtho (rviz_default_plugins)
-      X: -10.219451904296875
-      Y: -10.402557373046875
+      Value: ThirdPersonFollower (rviz)
+      Yaw: 5.738421440124512
     Saved:
       - Class: rviz_default_plugins/ThirdPersonFollower
         Distance: 18

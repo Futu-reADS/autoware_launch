@@ -2,10 +2,10 @@
   ros__parameters:
     input_frame: "base_link"
     output_frame: "base_link"
-    min_x: -60.0
-    max_x: 60.0
-    min_y: -60.0
-    max_y: 60.0
-    min_z: -30.0
-    max_z: 50.0
+    min_x: -200.0
+    max_x: 1000.0
+    min_y: -50.0
+    max_y: 50.0
+    min_z: -2.0
+    max_z: 3.0
     negative: False

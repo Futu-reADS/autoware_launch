@@ -6,7 +6,6 @@
   <arg name="sensor_model" default="testbed_sensor_kit" description="sensor model name"/>
   <arg name="use_pointcloud_container" default="true" description="launch pointcloud container"/>
   <arg name="pointcloud_container_name" default="pointcloud_container"/>
-  <arg name="ifb_driver" default="true"/>
   
 
   <!-- Optional parameters -->
@@ -31,7 +30,7 @@
   <!-- Map -->
   <!-- <arg name="lanelet2_map_file" default="nishi_shinjuku.osm" description="lanelet2 map file name"/> -->
   <!-- <arg name="pointcloud_map_file" default="nishi_shinjuku.pcd" description="pointcloud map file name"/> -->
-  <arg name="lanelet2_map_file" default="okinawa_full_single_loop.osm" description="lanelet2 map file name"/>
+  <arg name="lanelet2_map_file" default="okinawa_full_single_loop_fitted.osm" description="lanelet2 map file name"/>
   <arg name="pointcloud_map_file" default="okinawa_outside_clean.pcd" description="pointcloud map file name"/>
 
   <!-- System -->
@@ -117,12 +116,6 @@
   <!-- Tools -->
   <group>
     <node pkg="rviz2" exec="rviz2" name="rviz2" output="log" args="-d $(var rviz_config) -s $(find-pkg-share autoware_launch)/rviz/image/ft_autoware.png" if="$(var rviz)"/>
-  </group>
-
-  <!-- IFB driver -->
-
-  <group if="$(var ifb_driver)">
-    <include file="$(find-pkg-share ifb_driver_package)/launch/ifb.launch.xml"/>
   </group>
 
 </launch>

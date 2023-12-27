@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <!-- Essential parameters -->
-  <arg name="map_path" default="$(find-pkg-prefix ft_maps)/nishishinjuku_autoware_map" description="point cloud and lanelet2 map directory path"/>
+  <arg name="map_path" default="$(find-pkg-prefix ft_maps)/map" description="point cloud and lanelet2 map directory path"/>
   <arg name="vehicle_model" default="testbed_vehicle" description="vehicle model name"/>
   <arg name="sensor_model" default="testbed_sensor_kit" description="sensor model name"/>
 
@@ -17,8 +17,8 @@
   <arg name="control" default="true" description="launch control"/>
 
   <!-- Map -->
-  <arg name="lanelet2_map_file" default="lanelet2_map.osm" description="lanelet2 map file name"/>
-  <arg name="pointcloud_map_file" default="pointcloud_map.pcd" description="pointcloud map file name"/>
+  <arg name="lanelet2_map_file" default="nishishinjuku_no_tl.osm" description="lanelet2 map file name"/>
+  <arg name="pointcloud_map_file" default="nishishinjuku.pcd" description="pointcloud map file name"/>
 
   <!-- Control -->
   <!-- Vehicle -->
@@ -26,9 +26,10 @@
   <!-- System -->
   <arg name="launch_system_monitor" default="false" description="launch system monitor"/>
   <arg name="launch_dummy_diag_publisher" default="false" description="launch dummy diag publisher"/>
+  
   <!-- Tools -->
   <arg name="rviz" default="true" description="launch rviz"/>
-  <arg name="rviz_config" default="$(find-pkg-share autoware_launch)/rviz/ft_autoware.rviz" description="rviz config"/>
+  <arg name="rviz_config" default="$(find-pkg-share autoware_launch)/rviz/sim_testbed.rviz" description="rviz config"/>
 
   <group scoped="false">
     <include file="$(find-pkg-share autoware_launch)/launch/ft_autoware.launch.xml">
@@ -61,8 +62,11 @@
       <arg name="launch_dummy_diag_publisher" value="$(var launch_dummy_diag_publisher)"/>
 
       <!-- Sensing -->
-      <arg name="launch_sensing_driver"launch_sensing_driver
-      <!-- Tools -->
+      <arg name="launch_sensing_driver" value="false"/>
+
+      <!-- Perception-->
+      <arg name="traffic_light_recognition/enable_fine_detection" value="false"/>
+
       <arg name="rviz" value="$(var rviz)"/>
       <arg name="rviz_config" value="$(var rviz_config)"/>
       

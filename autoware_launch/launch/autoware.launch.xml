@@ -60,7 +60,7 @@
       <arg name="sensor_model" value="$(var sensor_model)"/>
       <arg name="vehicle_id" value="$(var vehicle_id)"/>
       <arg name="launch_vehicle_interface" value="$(var launch_vehicle_interface)"/>
-      <arg name="config_dir" value="$(find-pkg-share testbed_sensor_kit_description)/config"/>
+      <arg name="config_dir" value="$(find-pkg-share smv_sensor_kit_description)/config"/>
     </include>
   </group>
 

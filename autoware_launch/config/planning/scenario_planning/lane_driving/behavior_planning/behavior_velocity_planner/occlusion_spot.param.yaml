@@ -22,7 +22,7 @@
         max_slow_down_accel: -1.5           # [m/s^2] minimum accel deceleration for safe brake.
         non_effective_jerk: -0.3            # [m/s^3] weak jerk for velocity planning.
         non_effective_acceleration: -1.0    # [m/s^2] weak deceleration for velocity planning.
-        min_allowed_velocity: 1.0           # [m/s] minimum velocity allowed
+        min_allowed_velocity: 0.4           # [m/s] minimum velocity allowed
         safe_margin: 2.0                    # [m] margin for detection failure(0.5m) + pedestrian radius(0.5m) + safe margin(1.0m)
       detection_area:
         min_occlusion_spot_size: 1.0     # [m] occupancy grid must contain an UNKNOWN area of at least size NxN to be considered a hidden obstacle.

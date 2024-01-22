@@ -30,7 +30,7 @@
         truck: true
         bus: true
         trailer: true
-        unknown: false
+        unknown: true # LJ
         bicycle: false
         motorcycle: false
         pedestrian: false
@@ -38,7 +38,7 @@
       # For target object filtering
       target_filtering:
         # filtering moving objects
-        threshold_speed_object_is_stopped: 1.0          # [m/s]
+        threshold_speed_object_is_stopped: 0.5          # [m/s]
         threshold_time_object_is_moving: 1.0            # [s]
         threshold_time_force_avoidance_for_stopped_vehicle: 10.0 # [s]
         # detection range
@@ -78,12 +78,12 @@
           longitudinal_collision_safety_buffer: 0.0     # [m]
           min_prepare_distance: 1.0                     # [m]
           min_avoidance_distance: 10.0                  # [m]
-          min_nominal_avoidance_speed: 7.0              # [m/s]
-          min_sharp_avoidance_speed: 1.0                # [m/s]
+          min_nominal_avoidance_speed: 0.3              # [m/s]
+          min_sharp_avoidance_speed: 0.3                # [m/s]
 
       # For yield maneuver
       yield:
-        yield_velocity: 2.78                            # [m/s]
+        yield_velocity: 0.3                            # [m/s]
 
       # For stop maneuver
       stop:
@@ -92,7 +92,7 @@
 
       constraints:
         # vehicle slows down under longitudinal constraints
-        use_constraints_for_decel: false                # [-]
+        use_constraints_for_decel: false                # [-] LJ??
 
         # lateral constraints
         lateral:
@@ -106,7 +106,7 @@
           max_deceleration: -2.0                        # [m/ss]
           max_jerk: 1.0
           # For prevention of large acceleration while avoidance
-          min_avoidance_speed_for_acc_prevention: 3.0   # [m/s]
+          min_avoidance_speed_for_acc_prevention: 0.3   # [m/s]
           max_avoidance_acceleration: 0.5               # [m/ss]
 
       target_velocity_matrix:

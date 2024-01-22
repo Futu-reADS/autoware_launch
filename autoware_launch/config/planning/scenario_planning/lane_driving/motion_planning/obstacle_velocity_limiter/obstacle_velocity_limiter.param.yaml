@@ -2,12 +2,12 @@
   ros__parameters:
     min_ttc: 1.0  # [s] minimum time without collision when doing projection at each trajectory point
     distance_buffer: 0.0  # [m] extra distance to add to a projection (in addition to the vehicle overhang)
-    min_adjusted_velocity: 2.5  # [m/s] minimum velocity that the module can set
-    max_deceleration: 2.0  # [m/s²] maximum deceleration caused by the adjusted velocity
+    min_adjusted_velocity: 0.3  # [m/s] minimum velocity that the module can set
+    max_deceleration: 1.5  # [m/s²] maximum deceleration caused by the adjusted velocity
 
     trajectory_preprocessing:
       start_distance: 0.0  # [m] distance ahead of ego from which to start modifying the trajectory
-      max_length: 100.0 # [m] maximum distance (from the start point) where the velocity is adjusted
+      max_length: 50.0 # [m] maximum distance (from the start point) where the velocity is adjusted
       max_duration: 10.0 # [s] maximum duration (from the start point) where the velocity is adjusted
       downsample_factor: 10  # factor by which to downsample the input trajectory for calculation
       calculate_steering_angles: false # if true, the steering angle at each trajectory point is calculated from the change in heading

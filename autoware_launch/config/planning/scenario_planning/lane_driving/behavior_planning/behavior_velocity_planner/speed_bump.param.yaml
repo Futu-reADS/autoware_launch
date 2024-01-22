@@ -9,5 +9,5 @@
       speed_calculation:
         min_height: 0.05 # [m]
         max_height: 0.30 # [m]
-        min_speed: 1.39  # [m/s] = [5 kph]
-        max_speed: 2.78  # [m/s] = [10 kph]
+        min_speed: 0.5  # [m/s] = [5 kph]
+        max_speed: 1.0 # [m/s] = [10 kph]

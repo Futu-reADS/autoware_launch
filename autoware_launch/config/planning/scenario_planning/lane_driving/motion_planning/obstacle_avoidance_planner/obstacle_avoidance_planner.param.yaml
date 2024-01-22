@@ -12,7 +12,7 @@
         enable_pub_debug_marker: true           # publish debug marker
 
         # flag to show
-        enable_debug_info: false
+        enable_debug_info: true
         enable_calculation_time_info: false
 
     common:
@@ -69,13 +69,13 @@
 
       common:
         num_points: 100        # number of points for optimization [-]
-        delta_arc_length: 1.0  # delta arc length for optimization [m]
+        delta_arc_length: 0.50  # delta arc length for optimization [m]
 
       # kinematics:
         # If this parameter is commented out, the parameter is set as below by default.
         # The logic could be `optimization_center_offset = vehicle_info.wheelbase * 0.8`
         # The 0.8 scale is adopted as it performed the best.
-        # optimization_center_offset: 2.3 # optimization center offset from base link
+        optimization_center_offset: 0.5 # optimization center offset from base link
 
       clearance:  # clearance(distance) between vehicle and roads/objects when generating trajectory
         # if collision_free_constraints.option.hard_constraint is true
@@ -115,8 +115,8 @@
       # collision free constraint for optimization
       collision_free_constraints:
         option:
-          l_inf_norm: true
-          soft_constraint: true
+          l_inf_norm: false # true
+          soft_constraint: false # LJ MAJOR FIX true
           hard_constraint: false
 
         # how to represent footprint as circles

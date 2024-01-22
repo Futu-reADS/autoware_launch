@@ -10,8 +10,8 @@
       idling_time: 2.0 # idling time to detect front vehicle starting deceleration [s]
       min_ego_accel_for_rss: -1.0 # ego's acceleration to calculate RSS distance [m/ss]
       min_object_accel_for_rss: -1.0 # front obstacle's acceleration to calculate RSS distance [m/ss]
-      safe_distance_margin : 6.0 # This is also used as a stop margin [m]
-      terminal_safe_distance_margin : 3.0 # Stop margin at the goal. This value cannot exceed safe distance margin. [m]
+      safe_distance_margin : 3.0 # This is also used as a stop margin [m]
+      terminal_safe_distance_margin : 1.5 # Stop margin at the goal. This value cannot exceed safe distance margin. [m]
 
       lpf_gain_for_accel: 0.2 # gain of low pass filter for ego acceleration [-]
 
@@ -47,7 +47,7 @@
       decimate_trajectory_step_length : 2.0 # longitudinal step length to calculate trajectory polygon for collision checking
 
       # if crossing vehicle is decided as target obstacles or not
-      crossing_obstacle_velocity_threshold : 3.0 # velocity threshold for crossing obstacle for cruise or stop [m/s]
+      crossing_obstacle_velocity_threshold : 0.5 # velocity threshold for crossing obstacle for cruise or stop [m/s]
       crossing_obstacle_traj_angle_threshold : 1.22 # [rad] = 70 [deg], yaw threshold of crossing obstacle against the nearest trajectory point for cruise or stop
       collision_time_margin : 8.0 # time threshold of collision between obstacle adn ego for cruise or stop [s]
 
@@ -106,7 +106,7 @@
           enable_jerk_limit_to_output_acc: true
 
       min_accel_during_cruise: -2.0 # minimum acceleration during cruise to slow down [m/ss]
-      min_cruise_target_vel: 0.0 # minimum target velocity during slow down [m/s]
+      min_cruise_target_vel: 0.3 # minimum target velocity during slow down [m/s]
       time_to_evaluate_rss: 0.0
 
       lpf_normalized_error_cruise_dist_gain: 0.2
@@ -122,7 +122,7 @@
       t_dangerous: 0.5
 
       # For initial Motion
-      replan_vel_deviation: 5.0         # velocity deviation to replan initial velocity [m/s]
+      replan_vel_deviation: 0.5         # velocity deviation to replan initial velocity [m/s]
       engage_velocity: 0.25              # engage velocity threshold [m/s] (if the trajectory velocity is higher than this value, use this velocity for engage vehicle speed)
       engage_acceleration: 0.1           # engage acceleration [m/ss] (use this acceleration when engagement)
       engage_exit_ratio: 0.5             # exit engage sequence to normal velocity planning when the velocity exceeds engage_exit_ratio x engage_velocity.

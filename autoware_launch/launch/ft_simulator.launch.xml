@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <!-- Essential parameters -->
-  <arg name="map_path" default="$(find-pkg-prefix ft_maps)/nishishinjuku_autoware_map" description="point cloud and lanelet2 map directory path"/>
-  <arg name="vehicle_model" default="testbed_vehicle" description="vehicle model name"/>
-  <arg name="sensor_model" default="testbed_sensor_kit" description="sensor model name"/>
+  <arg name="map_path" default="$(find-pkg-prefix ft_maps)/map" description="point cloud and lanelet2 map directory path"/>
+  <arg name="vehicle_model" default="smv_vehicle" description="vehicle model name"/>
+  <arg name="sensor_model" default="smv_sensor_kit" description="sensor model name"/>
 
   <!-- Optional parameters -->
   <!-- Modules to be launched -->
@@ -17,8 +17,8 @@
   <arg name="control" default="true" description="launch control"/>
 
   <!-- Map -->
-  <arg name="lanelet2_map_file" default="lanelet2_map.osm" description="lanelet2 map file name"/>
-  <arg name="pointcloud_map_file" default="pointcloud_map.pcd" description="pointcloud map file name"/>
+  <arg name="lanelet2_map_file" default="nishishinjuku.osm" description="lanelet2 map file name"/>
+  <arg name="pointcloud_map_file" default="nishishinjuku.pcd" description="pointcloud map file name"/>
 
   <!-- Control -->
   <!-- Vehicle -->
@@ -61,7 +61,9 @@
       <arg name="launch_dummy_diag_publisher" value="$(var launch_dummy_diag_publisher)"/>
 
       <!-- Sensing -->
-      <arg name="launch_sensing_driver"launch_sensing_driver
+      <arg name="launch_sensing_driver" value="false"/>
+      <!-- Perception-->
+      <arg name="traffic_light_recognition/enable_fine_detection" value="false"/>
       <!-- Tools -->
       <arg name="rviz" value="$(var rviz)"/>
       <arg name="rviz_config" value="$(var rviz_config)"/>

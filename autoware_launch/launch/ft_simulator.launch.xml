@@ -2,8 +2,8 @@
 <launch>
   <!-- Essential parameters -->
   <arg name="map_path" default="$(find-pkg-prefix ft_maps)/map" description="point cloud and lanelet2 map directory path"/>
-  <arg name="vehicle_model" default="smv_vehicle" description="vehicle model name"/>
-  <arg name="sensor_model" default="smv_sensor_kit" description="sensor model name"/>
+  <arg name="vehicle_model" default="ftd_vehicle" description="vehicle model name"/>
+  <arg name="sensor_model" default="ftd_sensor_kit" description="sensor model name"/>
 
   <!-- Optional parameters -->
   <!-- Modules to be launched -->
